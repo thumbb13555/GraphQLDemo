@@ -1,0 +1,6 @@
+mutation Login($email:EmailAddress!, $password:String!){
+    userLogin(input:{email:$email,password:$password}){
+        token
+        auth
+    }
+}

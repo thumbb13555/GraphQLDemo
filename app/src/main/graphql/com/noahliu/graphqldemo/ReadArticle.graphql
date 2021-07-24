@@ -1,0 +1,6 @@
+mutation ReadArticle($id:ID!) {
+    readArticle(input: { id: $id }) {
+        title
+        id
+    }
+}

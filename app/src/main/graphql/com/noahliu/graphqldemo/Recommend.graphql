@@ -1,0 +1,9 @@
+query GetRecommend{
+    viewer{
+        recommendation{
+            newest(input:{first:20}){
+                totalCount
+            }
+        }
+    }
+}

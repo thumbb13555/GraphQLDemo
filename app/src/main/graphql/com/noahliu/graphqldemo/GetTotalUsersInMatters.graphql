@@ -1,0 +1,21 @@
+query GetTotalUsers($cursor:String!){
+    oss{
+        users(input:{after:$cursor}){
+            totalCount
+            pageInfo{
+                startCursor
+                endCursor
+                hasPreviousPage
+                hasNextPage
+            }
+            edges{
+                node{
+                    displayName
+                    info{
+                        createdAt
+                    }
+                }
+            }
+        }
+    }
+}

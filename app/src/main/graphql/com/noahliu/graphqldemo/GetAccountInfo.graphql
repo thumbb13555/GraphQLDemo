@@ -1,0 +1,7 @@
+query GetAccountInfo($user : String!) {
+    user(input:{userName :$user}) {
+        id
+        displayName
+        likerId
+    }
+}
